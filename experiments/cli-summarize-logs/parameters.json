@@ -1,0 +1,8 @@
+{
+    "scenario_id": "cli-summarize-logs-v1",
+    "workspace_mode": "empty",
+    "language": "python",
+    "test_framework": "pytest",
+    "package_manager": "pip",
+    "capture_mode": "full"
+}
