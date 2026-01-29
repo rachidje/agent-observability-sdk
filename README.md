@@ -137,6 +137,15 @@ Planned components include:
 No tooling is enforced yet.  
 Concepts come first.
 
+## Foundational Specification
+
+This project is based on the following foundational document:
+
+- [Observability for Agentic Systems — From Signals to Responsibility](spec/0001-observability-for-agentic-systems.md)
+
+This document defines the principles and constraints that all tooling in this repository must follow.
+
+
 
 ## How This Relates to Decision Observability
 
