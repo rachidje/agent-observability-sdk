@@ -142,6 +142,7 @@ Concepts come first.
 This project is based on the following foundational document:
 
 - [Observability for Agentic Systems — From Signals to Responsibility](spec/0001-observability-for-agentic-systems.md)
+- [Decision Events, Provenance, and Comparison Hooks](spec/0002-decision-events-provenance-comparison-hooks.md)
 
 This document defines the principles and constraints that all tooling in this repository must follow.
 
