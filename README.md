@@ -1,5 +1,7 @@
 # Agent Observability
 
+**Last updated:** 2026-01-29
+
 **Agent Observability** is an open framework for making **AI and agentic systems observable at the level that actually matters: decisions, reasoning, and responsibility.**
 
 It goes beyond logs, metrics, and traces to answer questions humans are accountable for:

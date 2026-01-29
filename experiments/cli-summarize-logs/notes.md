@@ -3,17 +3,24 @@
 This file is intentionally empty.
 Observations must be written only after a full agent run has completed.
 
-## Run 001 — Blocked by authorization
+## Run 001 — Blocked by external authorization (Claude Code CLI)
 
-The agent did not create any files.
-No filesystem changes were observed.
+**Run id:** b370f5ce-580b-40ac-b183-721f9aa87646  
+**Exit code:** 0  
+**Duration:** ~92s  
+**Observed FS diff:** empty (no files created/modified)
 
-Claude Code CLI requested explicit write permission approval
-before proceeding with file creation.
+### Observation
+Claude Code CLI did not create any files. Instead, it requested explicit write permission approval before proceeding.
 
-This indicates that the agent execution was blocked by
-an external authorization mechanism, not by internal reasoning
-or execution failure.
+Excerpt (stdout):
+"It looks like I need you to grant write permissions before I can create files..."
 
-This run validates the need for a first-class "blocked"
-state in agent observability.
+### Interpretation (black-box safe)
+This run indicates the agent execution can enter a **blocked** state due to an external authorization mechanism. The run “succeeded” at the process level (exit_code=0) but produced no workspace changes.
+
+### Implication for the framework
+We need a first-class structured state for:
+- `agent_action.action_type = blocked` (future)
+- reason: awaiting external authorization
+
